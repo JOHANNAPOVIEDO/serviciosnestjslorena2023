@@ -44,11 +44,11 @@ export class ProductEntity{
     title:string;
 
     @Column('number',{
-        name:'price',
+        name:'price',//nombre de la tabla
         comment:'precio del  producto',
     })
     
-    price:number;
+    price:number;//nombre del atributo
     
     @Column('varchar',{
         name:'description',
@@ -56,7 +56,27 @@ export class ProductEntity{
     })
     description:string;
 
+//antes de insertar y antes de actualizar
 
+ /*    @BeforeInsert()
+    @BeforeUpdate()
+    setEmail(){
+        if(!this.code){
+            return;
+        }
+        this.code = this.code.toLowerCase().trim();
+    }
+    async hashPassword(){
+       if(!this.password){
+        return;
+       }
+       this.password = await Bcrypt.hash(this.hashPassword, 10);
+    } */
 
 }
 
+
+
+
+
+//user es categoria y photo es producto
